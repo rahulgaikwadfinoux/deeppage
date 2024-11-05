@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open App Deep Link</title>
+</head>
+
+<body>
+
+    <h1>Open the App</h1>
+    <p>If you have the app installed, it will open automatically. Otherwise, you'll be redirected to the website.</p>
+
+    <button onclick="openDeepLink()">Open App</button>
+
+    <script>
+        function openDeepLink() {
+            const deepLink = 'https://renedeeplink.vercel.app/redirect?p1=invest'; // Replace with your actual deep link
+            // const fallbackUrl = 'https://renedeeplink.vercel.app/redirect?p1=invest'; // Replace with your fallback URL
+
+            // Try to open the app
+            window.location.href = deepLink;
+
+            // Set a fallback to the website if the app isn’t installed
+            // setTimeout(() => {
+            //     window.location.href = fallbackUrl;
+            // }, 1500); // Adjust the timeout as necessary
+        }
+    </script>
+
+</body>
+
+</html>
